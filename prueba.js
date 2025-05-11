@@ -22,61 +22,57 @@
 
 */
 const jugadora = document.querySelector(".js-select");
+const eleccionJugadora = jugadora.value;
 const btn = document.querySelector(".js-btn");
+const movOrdenador = Math.ceil(Math.random() * 9) + 1; // Genera un número aleatorio entre 1 y 9
 const result = document.querySelector(".js-result");
-const botonReiniciar = document.querySelector(".js-btn2");
-
+let quienGana = "";
 let contJugadora = 0;
 let contOrdenador = 0;
 let contJugadas = 0;
+const botonReiniciar = document.querySelector(".js-btn2");
 
 function jugada() {
   const eleccionJugadora = jugadora.value;
-  let movNumero = Math.ceil(Math.random() * 9);
-
-  let movOrdenador;
-  if (movNumero <= 3) {
+  let movOrdenador = Math.ceil(Math.random() * 9) + 1;
+  if (movOrdenador <= 3) {
     movOrdenador = "Piedra";
-  } else if (movNumero >= 7) {
+  } else if (movOrdenador >= 7) {
     movOrdenador = "Papel";
   } else {
     movOrdenador = "Tijera";
   }
-
-  let quienGana = "";
-
   if (
     (eleccionJugadora === "Piedra" && movOrdenador === "Tijera") ||
     (eleccionJugadora === "Papel" && movOrdenador === "Piedra") ||
     (eleccionJugadora === "Tijera" && movOrdenador === "Papel")
   ) {
-    quienGana = "¡Ganaste!";
+    quienGana = "Ganaste!";
     result.style.color = "green";
     contJugadora++;
-    document.querySelector(".js-contJugadora").innerHTML = `jugadora: ${contJugadora}`;
+    document.querySelector(
+      ".js-contJugadora"
+    ).innerHTML = `jugadora: ${contJugadora}`;
   } else if (
     (eleccionJugadora === "Piedra" && movOrdenador === "Papel") ||
     (eleccionJugadora === "Papel" && movOrdenador === "Tijera") ||
     (eleccionJugadora === "Tijera" && movOrdenador === "Piedra")
   ) {
-    quienGana = "¡Perdiste!";
+    quienGana = "Perdiste!";
     result.style.color = "red";
     contOrdenador++;
-    document.querySelector(".js-contOrdenador").innerHTML = `ordenador: ${contOrdenador}`;
+    document.querySelector(
+      ".js-contOrdenador"
+    ).innerHTML = `ordenador: ${contOrdenador}`;
   } else {
-    quienGana = "¡Empate!";
+    quienGana = "Empate!";
     result.style.color = "black";
   }
-
-  result.innerHTML = `<span style="color:#6A5ACD">Ordenador: ${movOrdenador}</span><br>Resultado: ${quienGana}`;
-
+  result.innerHTML = `<span style = "color:#6A5ACD"> Ordenador: ${movOrdenador}</span><br> Resultado: ${quienGana}`;
   contJugadas++;
-  
   if (contJugadas === 5) {
-    btn.disabled = true;
-
     if (contJugadora > contOrdenador) {
-      result.innerHTML += `<br><strong>¡Ganaste el juego! 🎉😊</strong>`;
+      result.innerHTML += `<br><strong>Ganaste el juego! 🎉😊</strong>`;
     } else if (contJugadora < contOrdenador) {
       result.innerHTML += `<br><strong>¡El ordenador ganó! 😢</strong><br>¡Ánimo, lo harás mejor la próxima vez! 💪`;
     } else {
@@ -84,16 +80,10 @@ function jugada() {
     }
   }
 }
-
 function reiniciarJuego() {
-  contJugadora = 0;
-  contOrdenador = 0;
-  contJugadas = 0;
-  document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
-  document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
-  result.innerHTML = "";
-  btn.disabled = false;
-}
+document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
+document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
 
+}
 btn.addEventListener("click", jugada);
 botonReiniciar.addEventListener("click", reiniciarJuego);
