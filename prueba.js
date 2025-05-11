@@ -36,7 +36,7 @@ const botonReiniciar = document.querySelector(".js-btn2");
 
 function jugada() {
   const eleccionJugadora = jugadora.value;
-  let movOrdenador = Math.ceil(Math.random() * 9) + 1;
+  let movOrdenador = Math.ceil(Math.random() * 9) ;
   if (movOrdenador <= 3) {
     movOrdenador = "Piedra";
   } else if (movOrdenador >= 7) {
