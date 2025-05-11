@@ -12,7 +12,7 @@
  si el jugador elige papel y el ordenador papel, empatan
  si el jugador elige tijera y el ordenador tijera, empatan
 4. el resultado se muestra en la pantalla y se acumula en el contador
-5 finaliza el juego al realizar 10 jugadas
+5 finaliza el juego al realizar 5 jugadas
 6 se muestra el resultado final
 7. si gana jugadora se tira confeti
 8. si gana ordenador aparece mensaje de ánimo ;)
@@ -72,7 +72,7 @@ function jugada() {
 
   contJugadas++;
   
-  if (contJugadas === 10) {
+  if (contJugadas === 5) {
     btn.disabled = true;
 
     if (contJugadora > contOrdenador) {
