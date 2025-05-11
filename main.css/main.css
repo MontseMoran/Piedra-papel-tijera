@@ -1,0 +1,75 @@
+.contenedor{
+    margin-top: 100px;
+    margin-left: 15%;
+    border: 3px solid rgb(59, 180, 99);
+    background-image: url(/piedra-papel-tijera/img/piedra-papel-tijera.jpeg);
+    background-size: cover;
+    width: 100vh;
+    height: 80%;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+
+    color: rgb(19, 126, 108);
+    font-size: 50px;
+    margin-top: 70px;
+   text-align: center;
+}
+.result{
+    color: rgb(19, 126, 108);
+    font-size: 30px;
+}
+
+
+#select{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+   background-color: rgb(246, 252, 250);
+    border-radius: 5px;
+    border: 3px solid rgb(1, 39, 14);
+    width: 40%;
+    height: 20%;
+    color: rgb(17, 1, 10);
+    text-align: center;
+    text-align-last: center;
+    direction: ltr;
+    padding: 10px ;
+}
+
+.boton {
+    color: rgb(242, 246, 245);
+    background-color:  rgb(19, 126, 108);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-color: aquamarine;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;
+    width: 100px;
+}
+.boton:hover {
+       color: rgb(143, 183, 188);
+       transition: color 0.3s ease;
+    }
+
+.boton2 {
+    color: rgb(240, 241, 241);
+    background-color: rgb(19, 126, 108);
+    margin-bottom: 40px;
+    border-color: aquamarine;
+    border-radius: 5px;
+    font-size: 18px;
+}
+p{
+    color: rgb(1, 14, 11);
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
