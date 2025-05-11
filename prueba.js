@@ -88,6 +88,7 @@ function jugada() {
 function reiniciarJuego() {
 document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
 document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
+btn.disabled = false;
 
 }
 btn.addEventListener("click", jugada);
