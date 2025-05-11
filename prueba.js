@@ -73,7 +73,9 @@ function jugada() {
   }
   result.innerHTML = `<span style = "color:#6A5ACD"> Ordenador: ${movOrdenador}</span><br> Resultado: ${quienGana}`;
   contJugadas++;
-  if (contJugadas === 5) {
+ if (contJugadas === 5) {
+  btn.disabled = true;
+}
     if (contJugadora > contOrdenador) {
       result.innerHTML += `<br><strong>Ganaste el juego! 🎉😊</strong>`;
     } else if (contJugadora < contOrdenador) {
