@@ -25,9 +25,8 @@
 
 */
 const jugadora = document.querySelector(".js-select");
-const eleccionJugadora = jugadora.value;
 const btn = document.querySelector(".js-btn");
-const movOrdenador = Math.ceil(Math.random() * 9) + 1; // Genera un número aleatorio entre 1 y 9
+const movOrdenador = Math.ceil(Math.random() * 9); // Genera un número aleatorio entre 1 y 9
 const result = document.querySelector(".js-result");
 let quienGana = "";
 let contJugadora = 0;
@@ -86,10 +85,13 @@ function jugada() {
   }
 }
 function reiniciarJuego() {
-document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
-document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
-btn.disabled = false;
-
+  contJugadora = 0;
+  contOrdenador = 0;
+  contJugadas = 0;
+  document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
+  document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
+  result.innerHTML = "";
+  btn.disabled = false;
 }
 btn.addEventListener("click", jugada);
 botonReiniciar.addEventListener("click", reiniciarJuego);
