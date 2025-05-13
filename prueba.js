@@ -102,6 +102,10 @@ document.querySelector(".js-contJugadora").innerHTML = `jugadora: 0`;
 document.querySelector(".js-contOrdenador").innerHTML = `ordenador: 0`;
 result.innerHTML = "";
 contPartidas.innerHTML = `Partida: 0/5`;
+contJugadoraInicial = 0;
+contOrdenadorInicial = 0;
+contJugadas = 0;
+
 
 }
 btn.addEventListener("click", jugada);
