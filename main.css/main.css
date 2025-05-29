@@ -75,14 +75,15 @@ p{
     margin-top: 10px;
     text-align: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .contenedor {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 20px;
+    height: 60vh
   }
 
   h1 {
