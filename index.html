@@ -16,12 +16,21 @@
 
             <h1>¡Vamos a jugar!</h1>
 
-            <select name="" id="select" class="js-select ">  
-                <option selected disabled value="selection">Introduce aquí tu jugada</option>
-                <option value="Piedra">Piedra</option>
-                <option value="Papel">Papel</option>
-                <option value="Tijera">Tijera</option>
-            </select>
+            <div class="js-opciones opciones">
+  <label>
+    <input type="radio" name="jugada" value="Piedra" class="js-input" />
+    🪨 Piedra
+  </label>
+  <label>
+    <input type="radio" name="jugada" value="Papel" class="js-input" />
+    📄 Papel
+  </label>
+  <label>
+    <input type="radio" name="jugada" value="Tijera" class="js-input" />
+    ✂️ Tijera
+  </label>
+</div>
+
 
             <button class="js-btn boton">jugar</button>
 
@@ -29,11 +38,11 @@
             <p class="js-contJugadora">Jugadora: 0</p>
             <p class="js-contOrdenador">Ordenador: 0</p>
             <p class="js-contPartidas">Partida: 0/5</p>
-            <button class="js-btn2 boton2">Vamos a jugar de nuevo!</button>
            
         </div>
 <div class="js-pantalla-final hidden">
     <h2 class="mensaje-final"></h2>
+         <button class="js-btn2 boton2">Vamos a jugar de nuevo!</button>
 </div>
     </main>
     <footer></footer>
